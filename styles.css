@@ -1,0 +1,58 @@
+:root { font-family: 'Avenir Next', Avenir, 'Segoe UI', sans-serif; color: #294957; background: #e7efdd; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(ellipse at 70% 25%, #fff7d7 0, #e7efdd 60%, #cee0d1 100%); }
+button { font: inherit; cursor: pointer; }
+button:focus-visible, .game:focus-visible { outline: 3px solid #d45c40; outline-offset: 4px; }
+[hidden] { display: none !important; }
+.layout { min-height: 100svh; display: flex; align-items: center; justify-content: center; gap: clamp(24px, 5vw, 88px); padding: 24px; }
+.intro { width: 280px; }
+.eyebrow { font-size: 10px; font-weight: 800; letter-spacing: 2px; }
+h1 { font-family: 'Arial Black', 'Avenir Next', sans-serif; font-size: 64px; line-height: .91; letter-spacing: -5px; font-weight: 1000; text-transform: uppercase; margin: 36px 0 28px; position: relative; transform: rotate(-5deg); color: #fff7d7; -webkit-text-stroke: 2px #355663; text-shadow: 0 5px 0 #355663, 0 9px 0 #a6b39a; }
+h1 span { position: absolute; top: -10px; right: 20px; -webkit-text-stroke: 0; text-shadow: none; font-size: 35px; color: #d9684c; vertical-align: top; margin-left: 5px; }
+.subtitle { font-size: 15px; line-height: 1.8; color: #536f73; }
+.flight-note { border-top: 1px solid #becdc5; margin-top: 40px; padding-top: 22px; }
+.flight-note > span, .edition { font-size: 9px; letter-spacing: 1.5px; font-weight: 700; }
+.flight-note p { font-size: 18px; font-weight: 800; line-height: 1.5; }
+.keys { margin: 28px 0 40px; font-size: 11px; }
+.keys p { display: flex; align-items: center; gap: 4px; }
+.keys span { margin-left: auto; color: #536f73; }
+kbd { font: inherit; font-weight: 700; border: 1px solid #bdcbc5; border-bottom-width: 3px; padding: 5px 7px; border-radius: 5px; }
+.edition { color: #6a8584; }
+.game { position: relative; flex-shrink: 0; width: min(540px, calc((100svh - 48px) * .6), calc(100vw - 32px)); aspect-ratio: 3 / 5; overflow: hidden; border-radius: 12px; background: #a6d8e8; box-shadow: 0 22px 0 -10px #405f592b, 0 24px 65px #204d5330, 0 0 0 7px #fff8de, 0 0 0 10px #41616a; container-type: inline-size; }
+canvas { display: block; width: 100%; height: 100%; }
+.hud { position: absolute; top: 0; inset-inline: 0; padding: 6cqw; pointer-events: none; }
+.hud-top { display: flex; justify-content: space-between; align-items: start; }
+.hud-top .eyebrow { font-size: 2cqw; display: block; }
+.hud strong { display: block; font-size: 9cqw; line-height: 1.2; letter-spacing: -2px; }
+.hud small { font-size: 3cqw; letter-spacing: 0; }
+.icon-button { pointer-events: auto; width: 9cqw; height: 9cqw; border: 1px solid #173e4930; border-radius: 50%; color: #173e49; background: #ffffff70; font-size: 4cqw; }
+.ride-row { display: flex; justify-content: space-between; margin-top: 4cqw; font-size: 2.8cqw; font-weight: 700; }
+.timer-track { height: 1.4cqw; background: #fff8; border-radius: 10px; overflow: hidden; margin-top: 1.5cqw; }
+#timer { background: #257c73; height: 100%; width: 100%; }
+.hud-bottom { display: flex; justify-content: space-between; font-size: 1.9cqw; letter-spacing: .7px; margin-top: 2cqw; }
+.toast { position: absolute; top: 43cqw; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 2cqw 4cqw; background: #fff9e9; border-radius: 30px; font-size: 2.8cqw; box-shadow: 0 4px 18px #173e4915; }
+.overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 7cqw; background: #a4d8e52b; }
+.panel { width: 100%; padding: 7cqw 6cqw; text-align: center; background: #fff6ddec; border: 3px solid #fffdf0; border-radius: 8px; box-shadow: 0 7px 0 #b4bc9b, 0 16px 35px #1c55552a; }
+.panel .eyebrow { font-size: 2cqw; color: #5b7d7c; }
+.panel h2 { font-family: 'Arial Black', 'Avenir Next', sans-serif; text-transform: uppercase; font-size: 8cqw; line-height: 1.05; font-weight: 1000; letter-spacing: -1px; margin: 3cqw 0; }
+.panel p { font-size: 3cqw; line-height: 1.6; color: #547171; }
+.panel .badge { font-size: 7cqw; color: #d9684c; }
+.button { width: 100%; border: 0; border-radius: 5px; padding: 3.4cqw; margin-top: 2.3cqw; font-weight: 700; font-size: 3cqw; background: #efa34e; color: #493b2c; border-bottom: 5px solid #bf743d; text-transform: uppercase; }
+.button:hover { background: #ffc568; transform: translateY(-1px); }
+.button.secondary { color: #204e51; background: #e7edd7; border: 1px solid #b9cbc1; border-bottom: 4px solid #a7b5a0; }
+.panel .fine { font-size: 2.4cqw; }
+.stage-footer { position: absolute; bottom: 4cqw; left: 6cqw; right: 6cqw; font-size: 1.7cqw; letter-spacing: 1.5px; opacity: .65; pointer-events: none; }
+.stage-footer span { float: right; }
+.guide { display: grid; gap: 2.5cqw; text-align: left; margin: 4cqw 0; }
+.guide-entry { display: flex; align-items: center; gap: 3cqw; border-bottom: 1px solid #d4ded2; padding-bottom: 2.5cqw; }
+.guide-entry canvas { width: 16cqw; height: 12cqw; }
+.guide-entry strong { font-size: 3cqw; }
+.guide-entry p { font-size: 2.4cqw; line-height: 1.4; margin: 1cqw 0 0; }
+.result { font-size: 15cqw; font-weight: 800; letter-spacing: -3px; }
+.result small { font-size: 4cqw; letter-spacing: 0; }
+.margin-note { display: flex; align-items: center; gap: 25px; writing-mode: vertical-rl; font-size: 9px; letter-spacing: 3px; color: #6a8584; }
+.vertical-line { height: 100px; width: 1px; background: #bdcdc5; }
+@media (max-width: 900px) { .margin-note { display: none; } .intro { width: 240px; } h1 { font-size: 54px; } .layout { gap: 30px; } }
+@media (max-width: 680px) { .intro { display: none; } .layout { padding: 16px; min-height: 100svh; } .game { width: min(540px, calc((100svh - 32px) * .6), calc(100vw - 32px)); } }
+
+.speed-label { margin-top: 2cqw; font-size: 2.1cqw; font-weight: 800; letter-spacing: 1px; color: #285667; }

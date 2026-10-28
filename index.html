@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b8dfea">
+  <title>Bird Keeper · Sky Rodeo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="layout">
+    <aside class="intro">
+      <p class="eyebrow">HANG ON. HOP OFF. FLY FURTHER.</p>
+      <h1>bird<br>keeper<span>✦</span></h1>
+      <p class="subtitle">The sky is your playground.<br>The flock is your way forward.</p>
+      <div class="flight-note"><span>YOUR NEXT RIDE IS UP THERE</span><p>Bigger wings. Longer rides.<br>A wilder flock around every turn.</p></div>
+      <div class="keys"><p><kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd><span>Find your line</span></p><p><kbd>SPACE</kbd><span>Leap to the next flyer</span></p><p><kbd>P</kbd> / <kbd>ESC</kbd><span>Take a breather</span></p></div>
+      <p class="edition">SKY RODEO · CATCH THE UNEXPECTED</p>
+    </aside>
+    <section id="game" class="game" tabindex="0" aria-label="Bird Keeper game. Steer with arrow keys or A and D. Jump with Space. Pause with P or Escape.">
+      <canvas id="sky" width="540" height="900" aria-label="Sky corridor with catchable flying creatures"></canvas>
+      <div id="hud" class="hud" hidden>
+        <div class="hud-top"><div><span class="eyebrow">DISTANCE</span><strong id="distance">0 <small>m</small></strong></div><button id="pause" class="icon-button" aria-label="Pause game">Ⅱ</button></div>
+        <div class="ride-row"><span id="mount">Gull</span><span id="timer-label">5.0 s</span></div>
+        <div class="timer-track"><div id="timer"></div></div>
+        <div class="hud-bottom"><span id="discoveries">0 / 4 discovered</span><span>SPACE TO LEAP</span></div>
+        <div id="speed" class="speed-label">18 m/s · OPEN SKY</div>
+      </div>
+      <div id="toast" class="toast" role="status" hidden></div>
+      <div id="overlay" class="overlay"></div>
+      <div class="stage-footer">KEEP YOUR EYES ON THE NEXT RIDE <span>↑</span></div>
+    </section>
+    <aside class="margin-note"><span>THE OPEN SKY</span><div class="vertical-line"></div><span>NO TWO FLIGHTS ALIKE</span></aside>
+  </main>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

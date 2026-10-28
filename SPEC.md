@@ -1,5 +1,18 @@
 # Bird Keeper: Sky Rodeo
 
+## Author revisions — October 28, 2026
+
+The author's implementation feedback supersedes conflicting tuning/visual proposals below. The numbered acceptance IDs remain stable.
+
+- Later, rarer rides should carry the player longer: current tuning is gull **5 s**, eagle **7 s**, bat **8 s**, pterodactyl **10 s**. The bat's rarity earns extra stamina despite its small size.
+- Species should have different forward speeds inspired by real flying animals, with eagle faster than gull. Current arcade multipliers: gull **1.00×**, eagle **1.18×**, bat **1.32×**, pterodactyl **1.12×**. These are gameplay ratios, not literal measured speeds; see README for sources and the fictional prehistoric-flyer choice.
+- Mounted steering currently uses **260 / 240 / 290 / 220 units/s**, respectively. Airborne steering and jump rules remain shared.
+- Flocks should become less linear and more demanding with distance: sweeping turns, alternate routes, lateral drift, and faster travel. Base speed now ramps from **180 to 330 units/s by 1,200 m**, multiplied by ridden species pace. Preserve a viable route rather than making random unavoidable gaps.
+- Visual target: **chunky 2.5D like Rodeo Stampede**, with shaded volume, an elevated oblique view, recognizable animal silhouettes, and depth in the environment. The implementation uses extruded Canvas meshes and a shared projection for creatures and catch markers. True 3D remains unnecessary.
+- The author maintains `prompt_log.md`; the assistant should not write or append to it.
+
+The original proposal follows for context. Use the README for tested implementation status and exact current tuning.
+
 ## 1. Read this first
 
 **One-sentence pitch:** An endless sky runner in which a tiny adventurer rides flying creatures, leaps between them before they become exhausted, and discovers increasingly unusual species farther into the journey.
